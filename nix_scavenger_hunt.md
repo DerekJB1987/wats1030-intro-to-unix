@@ -32,9 +32,9 @@ Desktop		Downloads	Movies		Pictures
 
 * You can use *options* to modify how a command runs. Try using `ls -alh` to see the contents of your current directory. *How are the results different when you use the `-alh` options?*
 
+```
 The results are organized in a structure to make it more readable to a user.
 
-```
 total 64
 drwxr-xr-x+  22 DEREK  staff   748B Jul  4 10:33 .
 drwxr-xr-x    6 root   admin   204B Oct 29  2016 ..
@@ -70,9 +70,9 @@ drwxr-xr-x+   5 DEREK  staff   170B Nov  1  2014 Public
 
 * Commands can also take *arguments*, which are usually the names of files or locations that you want the command to work with. Try running `ls /` to see what files are in the *root* directory of the filesystem. *What files and directories do you see listed?*
 
+```
 I think the files and directories that I see are more aligned to the system of my device rather than personalized files such as Documents, downloads, music, etc.
 
-```
 Applications		etc
 Library				home
 Network				installer.failurerequests
@@ -161,25 +161,25 @@ Harrell-Quitzon.user
 
 * Use the `cd` command to move "up" one directory. *Where are you in the filesystem now?*
 
+```
 I am one level up in my current directory.
 
-```
 Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$
 ```
 
 * Press the up arrow on your keyboard. *What just happened?* 
 
+```
 I see my last typed command.
 
-```
 Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$ cd ..
 ```
 
 * Press the up arrow a few more times. *What do you see?* 
 
+```
 I see my last few previous commands.
 
-```
 Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$ cd wats1030-intro-to-unix/
 ```
 
@@ -330,9 +330,9 @@ DEREK    ttys000  Jul  4 12:00
 
 * Run `ps aux` and review the results. (Hint: Use `man` to learn more about the `ps` command and options.) *How do you interpret what you see here?*
 
+```
 This showed all of your active processes that have controlling terminals on my computer.
 
-```
 USER               PID  %CPU %MEM      VSZ    RSS   TT  STAT STARTED      TIME COMMAND
 DEREK            21943   5.1  2.7  3624344 230436   ??  S     3:30PM  11:57.76 /Applications/Go
 DEREK            21927   4.4  2.4  3774800 198728   ??  S     3:30PM  14:38.95 /Applications/Go
@@ -664,9 +664,10 @@ DEREK            23366   0.0  1.1  3556416  90660   ??  S    11:23AM   0:13.86 /
 ```
 
 * Run `top` and review the results. (Hint: You may need to use `ctrl-c` to get out of this app.) *How do you interpret what you see here?* 
-I see that the numbers are continually updating in my terminal so I believe this is a live representation of all the processes running on my laptop.
 
 ```
+I see that the numbers are continually updating in my terminal so I believe this is a live representation of all the processes running on my laptop.
+
 Processes: 328 total, 2 running, 326 sleeping, 2077 threads                                                                     12:57:07
 Load Avg: 1.53, 1.76, 1.85  CPU usage: 5.5% user, 3.82% sys, 91.12% idle   SharedLibs: 160M resident, 40M data, 43M linkedit.
 MemRegions: 103253 total, 2226M resident, 53M private, 781M shared. PhysMem: 8039M used (1710M wired), 145M unused.
@@ -715,7 +716,9 @@ credit_cards2.txt:         ASCII text
 
 * Use the `more` command to view one of the `credit_cards` files you just discovered. (Hint: Type `q` to quit viewing the file. Press the `spacebar` to page down. Use your keyboard arrows to move up/down.) *What is the date in the file you have viewed?*
 
+
 ```
+The date is January 15th 2015.
 Dereks-MacBook-Pro:challenge_files DEREK$ more credit_cards.txt
 Last updated: 01-15-2015
 38419076308558
