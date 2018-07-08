@@ -24,7 +24,7 @@ and then clone it to your development environment.
 * Discover more about this filesystem. Use `ls` (the "list" command)to see what is in this directory. *What directories and files do you see when you run `ls`?*
 
 ```
-I see a list of the folders in my current directory.
+##I see a list of the folders in my current directory.
 
 Applications	Documents	Library		Music		Public
 Desktop		Downloads	Movies		Pictures
@@ -33,7 +33,7 @@ Desktop		Downloads	Movies		Pictures
 * You can use *options* to modify how a command runs. Try using `ls -alh` to see the contents of your current directory. *How are the results different when you use the `-alh` options?*
 
 ```
-The results are organized in a structure to make it more readable to a user.
+##The results are organized in a structure to make it more readable to a user.
 
 total 64
 drwxr-xr-x+  22 DEREK  staff   748B Jul  4 10:33 .
@@ -71,7 +71,7 @@ drwxr-xr-x+   5 DEREK  staff   170B Nov  1  2014 Public
 * Commands can also take *arguments*, which are usually the names of files or locations that you want the command to work with. Try running `ls /` to see what files are in the *root* directory of the filesystem. *What files and directories do you see listed?*
 
 ```
-I think the files and directories that I see are more aligned to the system of my device rather than personalized files such as Documents, downloads, music, etc.
+##I think the files and directories that I see are more aligned to the system of my device rather than personalized files such as Documents, downloads, music, etc.
 
 Applications		etc
 Library				home
@@ -100,7 +100,7 @@ Dereks-MacBook-Pro:/ DEREK$
 * Change directory into the `challenge_files` directory. Use `ls` to find only the files with a `.demo` pattern. *How many files do you find?*
 
 ```
-3 files named with .demo
+##3 files named with .demo
 
 01				Hillard-Ziemann.user
 2015_special_stuff.demo		Isadora-Leffler.user
@@ -162,7 +162,7 @@ Harrell-Quitzon.user
 * Use the `cd` command to move "up" one directory. *Where are you in the filesystem now?*
 
 ```
-I am one level up in my current directory.
+##I am one level up in my current directory.
 
 Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$
 ```
@@ -170,7 +170,7 @@ Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$
 * Press the up arrow on your keyboard. *What just happened?* 
 
 ```
-I see my last typed command.
+##I see my last typed command.
 
 Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$ cd ..
 ```
@@ -178,7 +178,7 @@ Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$ cd ..
 * Press the up arrow a few more times. *What do you see?* 
 
 ```
-I see my last few previous commands.
+##I see my last few previous commands.
 
 Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$ cd wats1030-intro-to-unix/
 ```
@@ -186,7 +186,8 @@ Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$ cd wats1030-intro-to-unix/
 * Run the `history` command. *What do you see?*
 
 ```
-I see Bash's log of commands I have typed.
+##I see Bash's log of commands I have typed.
+
 1  git config --global user.name "Dere Benak"
 2  git config --global user.email "benakderek@seattleu.edu"
 3  cat wats3010-css/.git/config
@@ -331,7 +332,7 @@ DEREK    ttys000  Jul  4 12:00
 * Run `ps aux` and review the results. (Hint: Use `man` to learn more about the `ps` command and options.) *How do you interpret what you see here?*
 
 ```
-This showed all of your active processes that have controlling terminals on my computer.
+##This showed all of your active processes that have controlling terminals on my computer.
 
 USER               PID  %CPU %MEM      VSZ    RSS   TT  STAT STARTED      TIME COMMAND
 DEREK            21943   5.1  2.7  3624344 230436   ??  S     3:30PM  11:57.76 /Applications/Go
@@ -666,7 +667,7 @@ DEREK            23366   0.0  1.1  3556416  90660   ??  S    11:23AM   0:13.86 /
 * Run `top` and review the results. (Hint: You may need to use `ctrl-c` to get out of this app.) *How do you interpret what you see here?* 
 
 ```
-I see that the numbers are continually updating in my terminal so I believe this is a live representation of all the processes running on my laptop.
+##I see that the numbers are continually updating in my terminal so I believe this is a live representation of all the processes running on my laptop.
 
 Processes: 328 total, 2 running, 326 sleeping, 2077 threads                                                                     12:57:07
 Load Avg: 1.53, 1.76, 1.85  CPU usage: 5.5% user, 3.82% sys, 91.12% idle   SharedLibs: 160M resident, 40M data, 43M linkedit.
@@ -709,7 +710,8 @@ PID    COMMAND      %CPU TIME     #TH   #WQ  #PORT MEM    PURG   CMPRS  PGRP  PP
 * Make sure you are in the `challenge_files` directory. Use the `*` wildcard to find all the files that have the word "credit" in the filename. *How many files did you find?*
 
 ```
-2 files with credit in the filename.
+##2 files with credit in the filename.
+
 credit_cards.txt:          ASCII text
 credit_cards2.txt:         ASCII text
 ```
@@ -718,7 +720,8 @@ credit_cards2.txt:         ASCII text
 
 
 ```
-The date is January 15th 2015.
+##The date is January 15th 2015.
+
 Dereks-MacBook-Pro:challenge_files DEREK$ more credit_cards.txt
 Last updated: 01-15-2015
 38419076308558
@@ -754,7 +757,7 @@ Dereks-MacBook-Pro:challenge_files DEREK$ find . -name modi_laboriosam.txt
 * Use the `grep` command to search for text within a file. Use `grep` on all the `.user` files in `challenge_files` to find which files contain "WA" (the abbreviation for Washington state). *How many files did you find?*
 
 ```
-There were 2 files that were returned in my search results.
+##There were 2 files that were returned in my search results.
 
 Dereks-MacBook-Pro:challenge_files DEREK$ grep "WA" *.user
 Britt-Erdman.user:O'Harachester, WA 37261
@@ -773,7 +776,7 @@ serial-numbers/eaque_molestiae.txt:Ut est maiores quia autem. Nisi modi Waldo se
 * Sometimes it's useful to output the results of a command to a text file for further analysis, reference, or processing. Try running `ls > files.txt`. Notice that the file `files.txt` was created. View that file using `more`. *What do you see in the `files.txt` file?*
 
 ```
-I see the names of all the files in the challenge_files directory.
+##I see the names of all the files in the challenge_files directory.
 
 Dereks-MacBook-Pro:challenge_files DEREK$ more files.txt
 01
