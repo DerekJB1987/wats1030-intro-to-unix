@@ -24,13 +24,15 @@ and then clone it to your development environment.
 * Discover more about this filesystem. Use `ls` (the "list" command)to see what is in this directory. *What directories and files do you see when you run `ls`?*
 
 ```
-I see the list of folders in my current directory.
+I see a list of the folders in my current directory.
 
 Applications	Documents	Library		Music		Public
 Desktop		Downloads	Movies		Pictures
 ```
 
 * You can use *options* to modify how a command runs. Try using `ls -alh` to see the contents of your current directory. *How are the results different when you use the `-alh` options?*
+
+The results are organized in a structure to make it more readable to a user.
 
 ```
 total 64
@@ -68,16 +70,18 @@ drwxr-xr-x+   5 DEREK  staff   170B Nov  1  2014 Public
 
 * Commands can also take *arguments*, which are usually the names of files or locations that you want the command to work with. Try running `ls /` to see what files are in the *root* directory of the filesystem. *What files and directories do you see listed?*
 
+I think the files and directories that I see are more aligned to the system of my device rather than personalized files such as Documents, downloads, music, etc.
+
 ```
-Applications			etc
+Applications		etc
 Library				home
 Network				installer.failurerequests
 System				net
 Users				private
 Volumes				sbin
-bin				tmp
+bin				    tmp
 cores				usr
-dev				var
+dev 				var
 ```
 
 * A Unix filesystem has a few special shortcuts to refer to specific locations. `/` indicates the *root* of the filesystem, meaning the top-most directory in the filesystem hierarchy. Use the `cd` ("change directory") command to move to the root directory. (Hint: Use `man` to look up the `cd` command if you have any issues) *Then run `pwd` and paste the output here:*
@@ -155,19 +159,25 @@ Harland-Schoen.user		wow
 Harrell-Quitzon.user
 ```
 
-* Use the `cd` command to move "up" one directory. *Where are you in the filesystem now?* I am one level up in my current directory.
+* Use the `cd` command to move "up" one directory. *Where are you in the filesystem now?*
+
+I am one level up in my current directory.
 
 ```
 Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$
 ```
 
-* Press the up arrow on your keyboard. *What just happened?* I see my last typed command.
+* Press the up arrow on your keyboard. *What just happened?* 
+
+I see my last typed command.
 
 ```
 Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$ cd ..
 ```
 
-* Press the up arrow a few more times. *What do you see?* I see my last few previous commands.
+* Press the up arrow a few more times. *What do you see?* 
+
+I see my last few previous commands.
 
 ```
 Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$ cd wats1030-intro-to-unix/
@@ -319,6 +329,7 @@ DEREK    ttys000  Jul  4 12:00
 ```
 
 * Run `ps aux` and review the results. (Hint: Use `man` to learn more about the `ps` command and options.) *How do you interpret what you see here?*
+
 This showed all of your active processes that have controlling terminals on my computer.
 
 ```
@@ -652,7 +663,8 @@ DEREK            23375   0.0  0.4  3378160  35300   ??  S    11:24AM   0:00.88 /
 DEREK            23366   0.0  1.1  3556416  90660   ??  S    11:23AM   0:13.86 /Applications/Go
 ```
 
-* Run `top` and review the results. (Hint: You may need to use `ctrl-c` to get out of this app.) *How do you interpret what you see here?* I see that the numbers are continually updating in my terminal so I believe this is a live representation of all the processes running on my laptop.
+* Run `top` and review the results. (Hint: You may need to use `ctrl-c` to get out of this app.) *How do you interpret what you see here?* 
+I see that the numbers are continually updating in my terminal so I believe this is a live representation of all the processes running on my laptop.
 
 ```
 Processes: 328 total, 2 running, 326 sleeping, 2077 threads                                                                     12:57:07
