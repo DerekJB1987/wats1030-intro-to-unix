@@ -14,14 +14,25 @@ and then clone it to your development environment.
 
 ### Navigating the Filesystem
 
-* Get an idea of where you are in the operating system. Use the `pwd` command to find your "path to working directory"--your current location in the filesystem of your devbox. *Paste the output of the `pwd` command here:* /Users/DEREK
+* Use the `pwd` command to find your "path to working directory"--your current location in the filesystem of your devbox.
+*Paste the output of the `pwd` command here:*
 
-* Discover more about this filesystem. Use `ls` (the "list" command)to see what is in this directory. *What directories and files do you see when you run `ls`?* I see the list of files in my current directory.
+```
+/Users/DEREK
+```
+
+* Discover more about this filesystem. Use `ls` (the "list" command)to see what is in this directory. *What directories and files do you see when you run `ls`?*
+
+```
+I see the list of folders in my current directory.
 
 Applications	Documents	Library		Music		Public
 Desktop		Downloads	Movies		Pictures
+```
 
 * You can use *options* to modify how a command runs. Try using `ls -alh` to see the contents of your current directory. *How are the results different when you use the `-alh` options?*
+
+```
 total 64
 drwxr-xr-x+  22 DEREK  staff   748B Jul  4 10:33 .
 drwxr-xr-x    6 root   admin   204B Oct 29  2016 ..
@@ -45,13 +56,19 @@ drwx------+   3 DEREK  staff   102B Nov  1  2014 Movies
 drwx------+   9 DEREK  staff   306B Jun 29 12:15 Music
 drwx------+  28 DEREK  staff   952B Jul  2 18:55 Pictures
 drwxr-xr-x+   5 DEREK  staff   170B Nov  1  2014 Public
+```
 
 * The `man` ("manual") command tells you more about how any given command works. Run `man` to see instructions about how to use `man`. Then use `man` to learn what the `a`, `l`, and `h` options mean when used with the `ls` command. *Write down what those options do?*
+
+```
     -a      What manual page do you want?
     -h      Print a help message and exit.
     -l      Activate 'local' mode. Format and display local manual files instead of searching through the system's manual collection.
+```
 
 * Commands can also take *arguments*, which are usually the names of files or locations that you want the command to work with. Try running `ls /` to see what files are in the *root* directory of the filesystem. *What files and directories do you see listed?*
+
+```
 Applications			etc
 Library				home
 Network				installer.failurerequests
@@ -61,15 +78,25 @@ Volumes				sbin
 bin				tmp
 cores				usr
 dev				var
+```
 
 * A Unix filesystem has a few special shortcuts to refer to specific locations. `/` indicates the *root* of the filesystem, meaning the top-most directory in the filesystem hierarchy. Use the `cd` ("change directory") command to move to the root directory. (Hint: Use `man` to look up the `cd` command if you have any issues) *Then run `pwd` and paste the output here:*
+
+```
 /
 Dereks-MacBook-Pro:/ DEREK$
+```
 
 * Another special shortcut in Unix is the `~` location. This indicates the *user root* directory, meaning the top-most directory in the hierarchy that comes below your user account. Use `cd` to move to `~`. *Run `pwd` and paste the response here:*
-/Users/DEREK
 
-* Change directory into the `challenge_files` directory. Use `ls` to find only the files with a `.demo` pattern. *How many files do you find?* 3 files named with .demo
+```
+/Users/DEREK
+```
+
+* Change directory into the `challenge_files` directory. Use `ls` to find only the files with a `.demo` pattern. *How many files do you find?*
+
+```
+3 files named with .demo
 
 01				Hillard-Ziemann.user
 2015_special_stuff.demo		Isadora-Leffler.user
@@ -126,17 +153,30 @@ Grant-Cronin.user		test2
 Hali-Roob.user			tmp
 Harland-Schoen.user		wow
 Harrell-Quitzon.user
+```
 
 * Use the `cd` command to move "up" one directory. *Where are you in the filesystem now?* I am one level up in my current directory.
+
+```
 Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$
+```
 
 * Press the up arrow on your keyboard. *What just happened?* I see my last typed command.
+
+```
 Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$ cd ..
+```
 
 * Press the up arrow a few more times. *What do you see?* I see my last few previous commands.
-Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$ cd wats1030-intro-to-unix/
 
-* Run the `history` command. *What do you see?* I see Bash's log of commands I have typed.
+```
+Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$ cd wats1030-intro-to-unix/
+```
+
+* Run the `history` command. *What do you see?*
+
+```
+I see Bash's log of commands I have typed.
 1  git config --global user.name "Dere Benak"
 2  git config --global user.email "benakderek@seattleu.edu"
 3  cat wats3010-css/.git/config
@@ -255,23 +295,33 @@ Dereks-MacBook-Pro:wats1030-intro-to-unix DEREK$ cd wats1030-intro-to-unix/
 116  ls
 117  cd ..
 118  history
+```
 
 ### Observing the System
 
 * Discover what account you are logged into using the `whoami` command. *What username are you currently using?*
+
+```
 DEREK
+```
 
 * Discover who else is on your system with the `who` command. *Are any other users using your system? If so, list them here:*
+
+```
 DEREK    console  Jun  5 14:59
 DEREK    ttys000  Jul  4 12:00
+```
 
 * How long has your system been running? Use `uptime` to see, and *paste the result here:*
+
+```
 12:48  up 28 days, 21:55, 2 users, load averages: 2.67 2.22 1.99
+```
 
 * Run `ps aux` and review the results. (Hint: Use `man` to learn more about the `ps` command and options.) *How do you interpret what you see here?*
 This showed all of your active processes that have controlling terminals on my computer.
 
-
+```
 USER               PID  %CPU %MEM      VSZ    RSS   TT  STAT STARTED      TIME COMMAND
 DEREK            21943   5.1  2.7  3624344 230436   ??  S     3:30PM  11:57.76 /Applications/Go
 DEREK            21927   4.4  2.4  3774800 198728   ??  S     3:30PM  14:38.95 /Applications/Go
@@ -599,11 +649,12 @@ DEREK            23733   0.0  0.6  2552612  53852   ??  S    12:01PM   0:01.71 /
 DEREK            23519   0.0  0.4  3383144  33972   ??  S    11:39AM   0:01.07 /Applications/Go
 DEREK            23436   0.0  0.6  3559692  46680   ??  S    11:30AM   0:01.64 /Applications/Go
 DEREK            23375   0.0  0.4  3378160  35300   ??  S    11:24AM   0:00.88 /Applications/Go
-DEREK            23366   0.0  1.1  3556416  90660   ??  S    11:23AM   0:13.86 /Applications/Go_
+DEREK            23366   0.0  1.1  3556416  90660   ??  S    11:23AM   0:13.86 /Applications/Go
+```
 
 * Run `top` and review the results. (Hint: You may need to use `ctrl-c` to get out of this app.) *How do you interpret what you see here?* I see that the numbers are continually updating in my terminal so I believe this is a live representation of all the processes running on my laptop.
 
-
+```
 Processes: 328 total, 2 running, 326 sleeping, 2077 threads                                                                     12:57:07
 Load Avg: 1.53, 1.76, 1.85  CPU usage: 5.5% user, 3.82% sys, 91.12% idle   SharedLibs: 160M resident, 40M data, 43M linkedit.
 MemRegions: 103253 total, 2226M resident, 53M private, 781M shared. PhysMem: 8039M used (1710M wired), 145M unused.
@@ -638,17 +689,21 @@ PID    COMMAND      %CPU TIME     #TH   #WQ  #PORT MEM    PURG   CMPRS  PGRP  PP
 23366  Google Chrom 0.2  00:14.29 18    2    137   45M    0B     25M    15377 15377 sleeping *0[1]           0.00000 0.00000    501
 23124  periodic-wra 0.0  00:00.01 2     2    26    12K    0B     392K   23124 1     sleeping *0[1]           0.00000 0.00000    0
 22996  Spotify Help 0.4  01:33.30 17    2    139   86M    0B     82M    22987 22987 sleeping *0[1]           0.00000 0.00000    501_
-
+```
 
 ### Finding and Viewing Files
 
 * Make sure you are in the `challenge_files` directory. Use the `*` wildcard to find all the files that have the word "credit" in the filename. *How many files did you find?*
+
+```
 2 files with credit in the filename.
 credit_cards.txt:          ASCII text
 credit_cards2.txt:         ASCII text
+```
 
 * Use the `more` command to view one of the `credit_cards` files you just discovered. (Hint: Type `q` to quit viewing the file. Press the `spacebar` to page down. Use your keyboard arrows to move up/down.) *What is the date in the file you have viewed?*
 
+```
 Dereks-MacBook-Pro:challenge_files DEREK$ more credit_cards.txt
 Last updated: 01-15-2015
 38419076308558
@@ -672,29 +727,37 @@ Last updated: 01-15-2015
 1800681788742606
 4024007195437
 374000604532174
+```
 
 * Use the `find` command to search for files more effectively. Search the sub-directories under `challenge_files` to find the location of the file named `modi_laboriosam.txt`. *Where is that file located?*
-Dereks-MacBook-Pro:challenge_files DEREK$ find . -name modi_laboriosam.txt
 
+```
+Dereks-MacBook-Pro:challenge_files DEREK$ find . -name modi_laboriosam.txt
 ./tmp/modi_laboriosam.txt
+```
 
 * Use the `grep` command to search for text within a file. Use `grep` on all the `.user` files in `challenge_files` to find which files contain "WA" (the abbreviation for Washington state). *How many files did you find?*
 
+```
 There were 2 files that were returned in my search results.
 
 Dereks-MacBook-Pro:challenge_files DEREK$ grep "WA" *.user
 Britt-Erdman.user:O'Harachester, WA 37261
 Lissie-Strosin.user:Jewessfurt, WA 00816-7241
+```
 
 * Use the `-r` option of `grep` to *recursively* find the text "Waldo" hidden in a file somewhere under the `challenge_files` directory. *Paste the result showing the file and line where the word "Waldo" shows up.*
 
+```
 Dereks-MacBook-Pro:challenge_files DEREK$ grep -r "Waldo" *
 serial-numbers/eaque_molestiae.txt:Ut est maiores quia autem. Nisi modi Waldo sed corporis sit explicabo ut est. Et est placeat ea sunt sunt consectetur sunt incidunt. Explicabo vel esse blanditiis dolorem culpa non quia.
+```
 
 ### Pipes and Connecting Commands
 
 * Sometimes it's useful to output the results of a command to a text file for further analysis, reference, or processing. Try running `ls > files.txt`. Notice that the file `files.txt` was created. View that file using `more`. *What do you see in the `files.txt` file?*
 
+```
 I see the names of all the files in the challenge_files directory.
 
 Dereks-MacBook-Pro:challenge_files DEREK$ more files.txt
@@ -722,9 +785,11 @@ Brad-Thiel.user
 Brayan-Douglas.user
 Bria-Satterfield.user
 files.txt
+```
 
 * Notice that if you run `ls -alh` in the `challenge_files` directory, the files scroll by very quickly. Sometimes it would be better to get the results in a paginated format. Try running `ls -alh | more`. *Describe what you see when you run `ls -alh | more`.*
 
+```
 Dereks-MacBook-Pro:challenge_files DEREK$ ls -alh | more
 total 880
 drwxr-xr-x  113 DEREK  staff   3.8K Jul  4 13:31 .
@@ -749,6 +814,10 @@ drwxr-xr-x   27 DEREK  staff   918B Jul  4 10:33 01
 -rw-r--r--    1 DEREK  staff    70B Jul  4 10:33 Bedford-Sipes.user
 -rw-r--r--    1 DEREK  staff    82B Jul  4 10:33 Benita-King.user
 -rw-r--r--    1 DEREK  staff    92B Jul  4 10:33 Benito-Stoltenberg.user
+```
 
 * Earlier, when you viewed the list of active processes on your devbox using `ps aux`, the list was probably really long. You can make this list more manageable by using the pipe (`|`) to filter the results of `ps` using `grep`. Run `ps aux | grep <your_username>` to see what processes are running for your specific user. *Paste the list of processes that reference your username here:*
+
+```
 DEREK            24137   0.0  0.0  2432804    792 s000  S+    1:48PM   0:00.00 grep Derek
+```
